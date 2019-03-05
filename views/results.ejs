@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+<h2 class='header'>Results for Your Search:</h2>
+<div class='cards'>
+<div id='resultGrid' class='ui grid container cards'>
+<% data['items'].forEach(function(book){ %>
+        <div id='test' class='four wide column'>
+            <div class="ui card">
+                <div class="image">
+                    <% if(book.volumeInfo.imageLinks !== undefined){ %>
+                        <img src='<%= book.volumeInfo.imageLinks.thumbnail%>'>
+                        <% } else { %>
+                            <img src='https://images.unsplash.com/photo-1506513083865-434a8a207e11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'>
+                        <% } %>
+                </div>
+                <div class="content">
+                    <strong><%= book.volumeInfo.title %></strong> - <%= book.volumeInfo.authors %> 
+                    <p><%=book.volumeInfo.publisher%></p>
+                    <div class="meta">
+                         
+                        <% if(book.volumeInfo.industryIdentifiers !== undefined){ %>
+                            <span><strong>ISBN: </strong><%=book.volumeInfo.industryIdentifiers[0].identifier%></span>    
+                        <% } else{ %>
+                            <span><strong>ISBN: </strong>Not Found</span>
+                            <% } %>
+                    </div>
+                    <div class="description">
+                        <a href='<%=book.volumeInfo.infoLink%>'>See this Book</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>
+</div>
+<% include partials/footer %>
