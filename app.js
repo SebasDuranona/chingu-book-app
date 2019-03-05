@@ -2,7 +2,7 @@ var port = process.env.PORT;
 if (port == null || port == "") {
   port = 8000;
 }
-app.listen(port);
+
 var express = require('express');
 var request = require('request');
 var app = express();
