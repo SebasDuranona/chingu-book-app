@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+<header>
+
+    <h1 class='header'>Find Your Book</h1>
+    
+    <div>
+        
+    
+        <form id='searchBar' action='/results' method='GET'>
+            <div class='ui action input'>
+                <input id='form-item' type='text' placeholder='Book Title' name='search' autocomplete='off' required>
+                <button class='button'>Search!</button>                
+            </div>
+
+        </form>
+    
+    </div>
+</header>
+
+
+
+<% include partials/footer %>

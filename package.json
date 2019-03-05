@@ -1,0 +1,16 @@
+{
+  "name": "book-finder-app",
+  "version": "1.0.0",
+  "description": "A simple book finder app using Google Books API for Chingu's Voyage 8",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sebas Duranona",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
